@@ -28,7 +28,7 @@ check_deps <- function() {
     status <- system("which jet")
     if (status == 1) {
         msg <- "Please install `jet` (see https://formulae.brew.sh/cask/jet) before continuing!"
-        logger::log_error(msg)
+        ## logger::log_error(msg)
         stop(msg)
     }
     
