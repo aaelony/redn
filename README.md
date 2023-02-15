@@ -1,18 +1,16 @@
 # redn
 
-(Caution WIP - not yet tested)
+`(Caution WIP - there be bugs... do not use yet)`
 
 An R package to read and write [EDN - Extensible Data Notation](https://github.com/edn-format/edn) format files.
 
 ## Usage
 
 ```r
-my.edn    <- "{:a 1 :b [1 2 3 4] :c \"foo\"}"
-blah1     <- redn::fromEDN(my.edn)
-blah2     <- redn::toEDN(blah1)
 
-
-
+my.json   <- '{"a":1, "b":"foo"}'
+blah1     <- redn::toEDN(my.json)
+## blah2     <- redn::fromEDN(blah1)
 
 ```
 
