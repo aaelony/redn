@@ -1,0 +1,19 @@
+Package: redn
+Type: Package
+Title: R Package to read and write EDN
+Version: 0.0.1
+Date: 2023-02-14
+Author: aaelony
+Description: Uses jet engine to convert between EDN and JSON, and rjson to convert between R and JSON.
+Depends:
+    R (>= 4.1.2),
+    rjson (>= 0.2.21)
+LinkingTo: Rcpp
+Suggests:
+   knitr,
+   rmarkdown,
+   testthat
+Encoding: UTF-8
+RoxygenNote: 7.2.1
+License: MIT
+VignetteBuilder: knitr
