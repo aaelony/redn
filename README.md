@@ -1,5 +1,7 @@
 # redn
 
+(Caution WIP - not yet tested)
+
 An R package to read and write [EDN - Extensible Data Notation](https://github.com/edn-format/edn) format files.
 
 
@@ -17,9 +19,8 @@ Please install the following dependencies prior to installing in R:
 Once you have installed the System Dependencies (`brew` and `jet`):
 
 ```
-YOUR_PAT <- names(read.csv('~/.git/patfile')
 library(remotes)
-remotes::install_github("aaelony/redn", auth_token = YOUR_PAT)
+remotes::install_github("aaelony/redn")
 
 ```
 
