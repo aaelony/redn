@@ -9,7 +9,7 @@ An R package to read and write [EDN - Extensible Data Notation](https://github.c
 ```r
 my.edn    <- "{:a 1 :b [1 2 3 4] :c \"foo\"}"
 blah1     <- redn::fromEDN(my.edn)
-blah2     <-redn::toEDN(blah1)
+blah2     <- redn::toEDN(blah1)
 
 
 
