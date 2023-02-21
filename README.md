@@ -6,11 +6,28 @@ An R package to read and write [EDN - Extensible Data Notation](https://github.c
 
 ## Usage
 
+Suppose you have an EDN file named "test.edn" as below:
+
+```clojure
+
+{:a 1
+ :b "foo"
+ :c [1 2 3 4]
+ :d {:e 0}
+ }
+
+```
+
+
 ```r
 
-my.json   <- '{"a":1, "b":"foo"}'
-blah1     <- redn::toEDN(my.json)
-## blah2     <- redn::fromEDN(blah1)
+some.edn  <- paste(readLines("test.edn"), collapse=" ")
+## [1] "{:a 1 :b \"foo\" :c [1 2 3 4] :d {:e 0} }"
+
+some.edn.converted.to.r <- fromEDN(some.edn)
+
+toEDN(some.edn.converted.to.r)
+## [1] "{\"a\" 1, \"b\" \"foo\", "\c\" [1 2 3 4], \"d\" {\"e\" 0}}"
 
 ```
 
@@ -37,6 +54,6 @@ remotes::install_github("aaelony/redn")
 # Building the package 
 
 ```
-RScript -e "devtools::document(); devtools::build(); roxygen2::roxygenise();  devtools:build_manual(); "
+RScript -e "devtools::document(); devtools::build(); roxygen2::roxygenise();  devtools::build_manual(); "
 
 ```

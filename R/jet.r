@@ -7,7 +7,7 @@ toEDN <- function(r_obj) {
     check_deps()
     json    <- rjson::toJSON(r_obj)
     jet.cmd <- "jet --from json --to edn"
-    edn     <- system(jet.cmd, input = json, intern=TRUE)
+    edn     <- paste(system(jet.cmd, input = json, intern=TRUE), collapse="")
     edn
 }
 
@@ -17,9 +17,8 @@ toEDN <- function(r_obj) {
 #' @export 
 fromEDN <- function(edn_string) {
     check_deps()
-    escaped_edn_string <- gsub("([.|()\\^{}+$*?]|\\[|\\])", "\\\\\\1", edn_string)
     jet.cmd            <- "jet --from edn --to json"
-    json               <- system(jet.cmd, input = escaped_edn_string, intern=TRUE)
+    json               <- paste(system(jet.cmd, input = edn_string, intern=TRUE), collapse="")
     r_obj              <- rjson::fromJSON(json)
     r_obj
 }
