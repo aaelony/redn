@@ -1,8 +1,8 @@
 # redn
 
-`(Caution WIP - there be bugs... do not use yet)`
 
 An R package to read and write [EDN - Extensible Data Notation](https://github.com/edn-format/edn) format files.
+All heavy lifting, parsing, and credit performed by [jet](https://github.com/borkdude/jet) as a dependency.
 
 ## Usage
 
